@@ -1,0 +1,223 @@
+.header__card_box {
+    height: 400px;
+    background-image: url(./image/background_card.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 32px;
+    margin-top: 64px;
+    
+    &__name-box {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 14px;
+    }
+
+    &__item {
+        border-top: 0.5px solid rgb(202, 205, 216);
+        padding-top: 25px;
+        padding-bottom: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    &__left {
+        display: flex;
+        gap: 32px;
+        
+        &_img {
+            transition: transform 0.3s ease;
+            position: relative;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.09);
+            }
+        }
+
+        &_input {
+            width: 71px;
+            height: 51px;
+            border-radius: 6px;
+            background: rgb(247, 246, 246);
+            font-family: inherit;
+            color: rgb(0, 0, 0);
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 210%;
+            letter-spacing: 0px;
+            text-align: center;
+            border: none;
+            background-image: url(./image/up);
+        }
+    }
+
+    &__btn {
+        display: flex;
+        gap: 6px;
+
+        &_item {
+            background: rgb(255, 255, 255);
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            border-radius: 20px;
+            width: 200px;
+            padding: 12px;
+            font-size: 15px;
+            line-height: 18px;
+            color: #000000;
+            font-family: inherit;
+            transition: color 0.4s ease;
+            cursor: pointer;
+        }
+        &_item:hover {
+            box-sizing: border-box;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 20px;
+            background: rgb(0, 0, 0);
+            color:rgb(255, 255, 255);
+        }
+    }
+
+    &__info {
+    width: 276px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+        &_title {
+            color: rgb(0, 0, 0);
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 29px;
+            letter-spacing: 0px;
+            text-align: left;
+        }
+
+        &_text {
+            color: rgb(136, 136, 136);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+
+        &_price {
+            color: rgb(5, 5, 5);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 0%;
+            text-align: left;
+        }
+
+        &_link-box {
+            display: flex;
+            column-gap: 30px;
+        }
+    }
+
+    &__content {
+        grid-column: span 8;
+    }
+    
+    &__form {
+    border-radius: 20px;
+    background:rgb(247, 246, 246);
+    height: 556px;
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+        &_title {
+            color: rgb(0, 0, 0);
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 29px;
+            letter-spacing: 0px;
+            text-align: center;
+            margin-top: 42px;
+            margin-bottom: 35px;
+        }
+
+        &_items {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        &_item {
+            width: 288px;
+            height: 19px;
+            border: none;
+            border-bottom: 1px solid rgb(202, 205, 216);
+            background-color: transparent;
+            outline: none;
+            color: rgb(0, 0, 0);
+            letter-spacing: 0%;
+            text-align: left;
+            padding-left: 1px;
+            padding-right: 1px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        &_item::placeholder {
+            color: #000000;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+        }
+
+
+        &_price {
+            color: rgb(0, 0, 0);
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 29px;
+            letter-spacing: 0px;
+            text-align: center;
+            margin-top: 64px;
+            margin-bottom: 18px;
+        }
+
+        &_order-btn {
+            background: rgba(255, 255, 255, 0.41);
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            border-radius: 20px;
+            width: 290px;
+            padding: 12px;
+            font-size: 15px;
+            line-height: 18px;
+            color: #000000;
+            font-family: inherit;
+            transition: color 0.4s ease;
+            cursor: pointer;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0px;
+            text-align: center;
+        }
+        &_order-btn:hover {
+            box-sizing: border-box;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 20px;
+            background: rgb(0, 0, 0);
+            color:rgb(255, 255, 255);
+        }
+    }
+
+}

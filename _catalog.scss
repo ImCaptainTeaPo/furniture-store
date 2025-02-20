@@ -1,0 +1,300 @@
+.filter-button-wrapper {
+    position: relative;
+}
+
+.container {
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    justify-content: flex-end;
+}
+
+.filtering-form {
+    position:absolute;
+    top: 55px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 36px;
+    background-color: #fff;
+    box-shadow: 0px 4px 67px -12px rgba(0, 0, 0, 0.32);
+    padding: 40px 48px;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.filtering-form.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.filtering-form__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 32px 65px;
+    max-height: 548px;
+    min-width: 540px;
+}
+
+.filtering-form__fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+    border: none;
+}
+
+.filtering-form__fieldset--type {
+    padding-right: 40px;
+}
+
+.filtering-form__legend {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.filtering-form__button {
+    align-self: flex-end;
+    max-width: 190px;
+    width: 100%;
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.radio__input {
+    display: none;
+}
+
+.radio__label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+    font-size: 14px;
+}
+
+.radio__label::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border: 1px solid #888888;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+}
+
+.radio__input:checked + .radio__label::before {
+    border-color: #000;
+    background-image: url(./image/galka.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.range {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.range__input {
+    width: 190px;
+    height: 10px;
+    overflow: hidden;
+    outline: none;
+}
+
+.range__input,
+.range__input::-webkit-slider-runnable-track,
+.range__input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: none;
+}
+
+.range__input::-webkit-slider-runnable-track {
+    width: 200px;
+    height: 1px;
+    background: #000;
+}
+
+.range__input:nth-child(2)::-webkit-slider-runnable-track {
+    background: none;
+}
+
+.range__input::-webkit-slider-thumb {
+    position: relative;
+    height: 8px;
+    width: 8px;
+    margin-top: -4px;
+    background: #000;
+    border: 1px solid #000;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.range__input::-webkit-slider-thumb:active {
+    cursor: grabbing;
+}
+
+.range__input:nth-child(1)::-webkit-slider-thumb {
+    z-index: 2;
+}
+
+.range__slider {
+    font-family: inherit;
+    font-size: 14px;
+    position: relative;
+    height: 20px;
+    width: 210px;
+    display: inline-block;
+    margin-top: -5px;
+}
+
+.range__slider input {
+    position: absolute;
+}
+
+.color-options {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 190px;
+    gap: 14px;
+}
+
+.color-options__checkbox {
+    width: 15px;
+    height: 15px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox__input {
+    display: none;
+}
+
+.checkbox__label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+    font-size: 14px;
+}
+
+.checkbox__label::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #888888;
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+}
+
+.checkbox__input:checked + .checkbox__label::before {
+    background-image: url(./image/galka.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-color: #000;
+}
+
+.checkbox__label--white::before {
+    background-color: #fff;
+    border-color: #808080;
+}
+.checkbox__label--black::before {
+    background-color: #000000;
+    border-color: #000;
+}
+.checkbox__label--grey::before {
+    background-color: #737373;
+    border-color: #737373;
+}
+.checkbox__label--red::before {
+    background-color: #f00;
+    border-color: #f00;
+}
+.checkbox__label--orange::before {
+    background-color: #ff4500;
+    border-color: #ff4500;
+}
+.checkbox__label--yellow::before {
+    background-color: #ff0;
+    border-color: #ff0;
+}
+.checkbox__label--green::before {
+    background-color: #008000;
+    border-color: #008000;
+}
+.checkbox__label--aqua::before {
+    background-color: #40e0d0;
+    border-color: #40e0d0;
+}
+.checkbox__label--lightblue::before {
+    background-color: #009fe3;
+    border-color: #009fe3;
+}
+.checkbox__label--blue::before {
+    background-color: #00f;
+    border-color: #00f;
+}
+.checkbox__label--purple::before {
+    background-color: #800080;
+    border-color: #800080;
+}
+.checkbox__label--lightpurple::before {
+    background-color: #8a2be2;
+    border-color: #8a2be2;
+}
+.checkbox__label--lightpink::before {
+    background-color: #d89aff;
+    border-color: #d89aff;
+}
+.checkbox__label--pink::before {
+    background-color: #ff1493;
+    border-color: #ff1493;
+}
+
+.checkbox__input:checked + .checkbox__label--black::before,
+.checkbox__input:checked + .checkbox__label--blue::before,
+.checkbox__input:checked + .checkbox__label--purple::before,
+.checkbox__input:checked + .checkbox__label--lightpurple::before {
+    background-image: url(./image/galgawhite.svg);
+}
+
+.button {
+    background: rgb(255, 255, 255);
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 200px;
+    padding: 12px;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    font-family: inherit;
+    transition: color 0.4s ease;
+    cursor: pointer;
+}
+.button:hover {
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    background: rgb(0, 0, 0);
+    color:rgb(255, 255, 255);
+}
