@@ -38,8 +38,8 @@
    ```bash
    git clone https://github.com/ImCaptainTeaPo/furniture-store.git
 2. Перейдите в директорию проекта:
-   ```bash
-  cd furniture-store
+   ```bash cd furniture-store```bash
+
 
 3. Откройте файл index.html в браузере: Просто перетащите файл в окно браузера или используйте опцию "Открыть файл" в меню браузера.
 
